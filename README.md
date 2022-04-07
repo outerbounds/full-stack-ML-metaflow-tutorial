@@ -36,18 +36,18 @@ If you do not already have the [Anaconda distribution](https://www.anaconda.com/
 Navigate to the relevant directory `full-stack-ML-metaflow-tutorial` and install required packages in a new conda environment:
 
 ```
-conda env create -f environment.yml
+conda env create -f env.yml
 ```
 
 This will create a new environment called full-stack-ML-metaflow-tutorial. To activate the environment on OSX/Linux, execute
 
 ```
-source activate full-stack-ML-metaflow-tutorial
+source activate full-stack-metaflow
 ```
 On Windows, execute
 
 ```
-activate full-stack-ML-metaflow-tutorial
+activate full-stack-metaflow
 ```
 
 
