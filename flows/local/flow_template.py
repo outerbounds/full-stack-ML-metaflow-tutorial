@@ -1,11 +1,11 @@
+
 """
 
 Template for writing Metaflows
 
 """
 
-import os
-from metaflow import FlowSpec, step, batch, current, environment, S3
+from metaflow import FlowSpec, step, current, card
 
 
 class Template_Flow(FlowSpec):
@@ -20,7 +20,7 @@ class Template_Flow(FlowSpec):
     - Model training
     - Model deployment
     """
-
+    @card
     @step
     def start(self):
         """
