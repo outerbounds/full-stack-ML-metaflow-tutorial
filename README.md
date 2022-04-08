@@ -4,6 +4,11 @@
 One of the key questions in modern data science and machine learning, for businesses and practitioners alike, is how do you move machine learning projects from prototype and experiment to production as a repeatable process. In this workshop, we present an introduction to the landscape of production-grade tools, techniques, and workflows that bridge the gap between laptop data science and production ML workflows.
 
 
+Also, note that when we say we're teaching "Full Stack Machine Learning", we are not advocating for the existence of "Full Stack Data Scientists"! Rather, our goals lay in teaching which layers of the modern data stack data scientists need to be focusing on, while having (relatively) easy access to key infrastructural layers:
+
+![flow0](../img/data-triangle.jpg)
+
+
 
 ## Prerequisites
 
