@@ -1,0 +1,442 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {
+        "default_identifier_name": "<YOUR MEANINGFUL IDENTIFIER>"
+      },
+      "data_asset_name": "iris",
+      "data_connector_name": "default_runtime_data_connector_name",
+      "datasource_name": "flowers"
+    },
+    "batch_markers": {
+      "ge_load_time": "20220323T050616.417771Z",
+      "pandas_data_fingerprint": "fa23f54d92bca516aa06bb08c256935a"
+    },
+    "batch_spec": {
+      "batch_data": "PandasDataFrame",
+      "data_asset_name": "iris"
+    },
+    "expectation_suite_name": "flowers-testing-suite",
+    "great_expectations_version": "0.14.11",
+    "run_id": {
+      "run_name": "20220323-160616-flower-power",
+      "run_time": "2022-03-23T16:06:16.401004+00:00"
+    },
+    "validation_time": "20220323T050616.460067Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_columns_to_match_ordered_list",
+        "kwargs": {
+          "batch_id": "59b121deea2a244c85e029fac98a9341",
+          "column_list": [
+            "sepal length (cm)",
+            "sepal width (cm)",
+            "petal length (cm)",
+            "petal width (cm)",
+            "target"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": [
+          "sepal length (cm)",
+          "sepal width (cm)",
+          "petal length (cm)",
+          "petal width (cm)",
+          "target"
+        ]
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "59b121deea2a244c85e029fac98a9341",
+          "column": "sepal width (cm)",
+          "value_set": [
+            2.0,
+            2.2,
+            2.3,
+            2.4,
+            2.5,
+            2.6,
+            2.7,
+            2.8,
+            2.9,
+            3.0,
+            3.1,
+            3.2,
+            3.3,
+            3.4,
+            3.5,
+            3.6,
+            3.7,
+            3.8,
+            3.9,
+            4.0,
+            4.1,
+            4.2,
+            4.4
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 150,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": null,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "59b121deea2a244c85e029fac98a9341",
+          "column": "sepal width (cm)"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 150,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": null,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "59b121deea2a244c85e029fac98a9341",
+          "column": "sepal width (cm)",
+          "type_list": [
+            "FLOAT",
+            "FLOAT4",
+            "FLOAT8",
+            "FLOAT64",
+            "DOUBLE",
+            "DOUBLE_PRECISION",
+            "NUMERIC",
+            "FloatType",
+            "DoubleType",
+            "float",
+            "float_",
+            "float16",
+            "float32",
+            "float64",
+            "number",
+            "DECIMAL",
+            "REAL"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "59b121deea2a244c85e029fac98a9341",
+          "column": "petal length (cm)",
+          "value_set": [
+            1.0,
+            1.1,
+            1.2,
+            1.3,
+            1.4,
+            1.5,
+            1.6,
+            1.7,
+            1.9,
+            3.0,
+            3.3,
+            3.5,
+            3.6,
+            3.7,
+            3.8,
+            3.9,
+            4.0,
+            4.1,
+            4.2,
+            4.3,
+            4.4,
+            4.5,
+            4.6,
+            4.7,
+            4.8,
+            4.9,
+            5.0,
+            5.1,
+            5.2,
+            5.3,
+            5.4,
+            5.5,
+            5.6,
+            5.7,
+            5.8,
+            5.9,
+            6.0,
+            6.1,
+            6.3,
+            6.4,
+            6.6,
+            6.7,
+            6.9
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 150,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": null,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "59b121deea2a244c85e029fac98a9341",
+          "column": "petal length (cm)"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 150,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": null,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "59b121deea2a244c85e029fac98a9341",
+          "column": "petal length (cm)",
+          "type_list": [
+            "FLOAT",
+            "FLOAT4",
+            "FLOAT8",
+            "FLOAT64",
+            "DOUBLE",
+            "DOUBLE_PRECISION",
+            "NUMERIC",
+            "FloatType",
+            "DoubleType",
+            "float",
+            "float_",
+            "float16",
+            "float32",
+            "float64",
+            "number",
+            "DECIMAL",
+            "REAL"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "59b121deea2a244c85e029fac98a9341",
+          "column": "petal width (cm)",
+          "value_set": [
+            0.1,
+            0.2,
+            0.3,
+            0.4,
+            0.5,
+            0.6,
+            1.0,
+            1.1,
+            1.2,
+            1.3,
+            1.4,
+            1.5,
+            1.6,
+            1.7,
+            1.8,
+            1.9,
+            2.0,
+            2.1,
+            2.2,
+            2.3,
+            2.4,
+            2.5
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 150,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": null,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "59b121deea2a244c85e029fac98a9341",
+          "column": "petal width (cm)"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 150,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": null,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "59b121deea2a244c85e029fac98a9341",
+          "column": "petal width (cm)",
+          "type_list": [
+            "FLOAT",
+            "FLOAT4",
+            "FLOAT8",
+            "FLOAT64",
+            "DOUBLE",
+            "DOUBLE_PRECISION",
+            "NUMERIC",
+            "FloatType",
+            "DoubleType",
+            "float",
+            "float_",
+            "float16",
+            "float32",
+            "float64",
+            "number",
+            "DECIMAL",
+            "REAL"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 10,
+    "success_percent": 100.0,
+    "successful_expectations": 10,
+    "unsuccessful_expectations": 0
+  },
+  "success": true
+}
