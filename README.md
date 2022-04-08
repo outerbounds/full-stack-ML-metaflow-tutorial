@@ -6,7 +6,7 @@ One of the key questions in modern data science and machine learning, for busine
 
 Also, note that when we say we're teaching "Full Stack Machine Learning", we are not advocating for the existence of "Full Stack Data Scientists"! Rather, our goals lay in teaching which layers of the modern data stack data scientists need to be focusing on, while having (relatively) easy access to key infrastructural layers:
 
-![flow0](../img/data-triangle.jpg)
+![flow0](img/data-triangle.jpg)
 
 
 
