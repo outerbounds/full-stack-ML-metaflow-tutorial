@@ -75,6 +75,8 @@ This lesson will be a refresher on laptop machine learning, that is, when you’
 
 This lesson will focus on building local machine learning workflows using Metaflow, although the high-level concepts taught will be applicable to any workflow orchestrator. Attendees will get a feel for writing flows and DAGs to define the steps in their workflows. We’ll also use DAG cards to visualize our ML workflows. This lesson will be local computation and in the next lesson, we’ll burst to the cloud.
 
+We'll introduce the framework Metaflow, which allows data scientists to focus on the top layers of the ML stack, while having access to the infrastructural layers.
+
 
 - Lesson 3: Bursting to the Cloud
 
@@ -84,6 +86,8 @@ In this lesson, we’ll see how we can move ML steps or entire workflows to the 
 
 
 We’ll also see how to begin integrating other tools into our pipelines, such as dbt for data transformation, great expectations for data validation, Weights & Biases for experiment tracking, and Amazon Sagemaker for model deployment. Once again, the intention is not to tie us to any of these tools, but to use them to illustrate various aspects of the ML stack and to develop a workflow in which they can easily be switched out for other tools, depending on where you work and who you’re collaborating with.
+
+To be clear, lessons 1-3 above get you far! As your projects mature, the more advanced topics in Lesson 4 become relevant. 
 
 
 
