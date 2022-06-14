@@ -11,6 +11,7 @@ jobs:
    strategy:
        matrix:
          os: [ubuntu-latest, windows-latest]
+         py: ['3.7', '3.8', '3.9', '3.10']
    runs-on: ${ matrix.os }
    steps:
       - uses: actions/checkout@v2
@@ -18,4 +19,6 @@ jobs:
         uses: mamba-org/provision-with-micromamba@main
         with:
          environment-file: env.yml
+         extra-specs: |
+            python=${ matrix.py }
    
