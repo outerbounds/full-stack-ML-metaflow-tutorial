@@ -8,11 +8,14 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-    steps:
+   strategy:
+       matrix:
+         os: [ubuntu-latest, windows-latest]
+   runs-on: ${ matrix.os }
+   steps:
       - uses: actions/checkout@v2
       - name: Install Conda environment from environment.yml
         uses: mamba-org/provision-with-micromamba@main
         with:
-         environment-file: env.yaml
+         environment-file: env.yml
    
