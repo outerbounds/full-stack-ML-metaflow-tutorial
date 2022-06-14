@@ -1,0 +1,17 @@
+name: Basic tests
+on:
+ - push:
+   paths:
+   - 'env.yml'
+ - workflow-dispatch:
+ 
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Conda environment from environment.yml
+        uses: mamba-org/provision-with-micromamba@main
+        environment-file: env.yaml
+   
