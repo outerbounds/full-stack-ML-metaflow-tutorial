@@ -1,3 +1,5 @@
+**If you're taking this tutorial at a conference, please pull the repository 24 hours before the tutorial begins to make sure to have the most recent version!**
+
 # full-stack-ML-metaflow-tutorial
 
 
