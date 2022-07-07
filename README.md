@@ -92,5 +92,26 @@ We’ll also see how to begin integrating other tools into our pipelines, such a
 To be clear, lessons 1-3 above get you far! As your projects mature, the more advanced topics in Lesson 4 become relevant. 
 
 
+## Run Flows with Makefile
 
+To run all flows you will first need to do the following:
+- ensure your ~/.metaflowconfig/config.json is able to run on AWS Batch
+- run `wandb login` in the command line and paste in your Weights and Biases API key
+- create a `my.env` file in the root of this repo containing `ROLE=<your Sagemaker execution role>` and `CODE_LOCATION=<S3 bucket for Sagemaker example model code>`
 
+To run all flows:
+```
+make all
+```
+
+To run by notebooks:
+```
+make nb2
+make nb3
+make nb3
+```
+
+To run all flows that do not require cloud: 
+```
+make all_cloudless
+```
