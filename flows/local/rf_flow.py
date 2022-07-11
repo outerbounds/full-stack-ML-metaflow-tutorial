@@ -1,7 +1,7 @@
 
 from metaflow import FlowSpec, step, card
 
-class ClassificationFlow(FlowSpec):
+class RF_Flow(FlowSpec):
     """
     train a random forest
     """
@@ -53,4 +53,4 @@ class ClassificationFlow(FlowSpec):
 
 
 if __name__ == "__main__":
-    ClassificationFlow()
+    RF_Flow()

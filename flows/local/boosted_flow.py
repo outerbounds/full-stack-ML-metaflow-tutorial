@@ -38,7 +38,7 @@ class BSTFlow(FlowSpec):
     @step
     def end(self):
         """
-        End of flow, yo!
+        End of flow!
         """
         print("BSTFlow is all done.")
 

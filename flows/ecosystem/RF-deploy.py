@@ -1,9 +1,14 @@
 
 
-from metaflow import FlowSpec, step, Parameter, JSONType, IncludeFile, card, S3
+from metaflow import FlowSpec, step, Parameter, JSONType, IncludeFile, card, S3, environment
+import os
 import json
+from dotenv import load_dotenv
+load_dotenv('my.env')
 
-class ClassificationFlow(FlowSpec):
+
+
+class Deployment_Flow(FlowSpec):
     """
     train a random forest
     """
@@ -50,7 +55,7 @@ class ClassificationFlow(FlowSpec):
         self.y_pred = self.clf.predict(self.X_test)
         self.y_probs = self.clf.predict_proba(self.X_test)
         self.next(self.deploy)
-        
+
     @step
     def deploy(self):
         """
@@ -62,10 +67,14 @@ class ClassificationFlow(FlowSpec):
         import shutil
         import tarfile
         from sagemaker.sklearn import SKLearnModel
+        
+        ROLE = os.getenv('ROLE')
+        CODE_LOCATION = os.getenv('CODE_LOCATION')
 
 
         model_name = "model"
         local_tar_name = "model.tar.gz"
+
 
         os.makedirs(model_name, exist_ok=True)
         # save model to local folder
@@ -78,14 +87,14 @@ class ClassificationFlow(FlowSpec):
             with open(local_tar_name, "rb") as in_file:
                 data = in_file.read()
                 self.model_s3_path = s3.put(local_tar_name, data)
-                print('Model saved at {}'.format(self.model_s3_path))
+                #print('Model saved at {}'.format(self.model_s3_path))
         # remove local model folder and tar
         shutil.rmtree(model_name)
         os.remove(local_tar_name)
         # initialize SageMaker SKLearn Model
         sklearn_model = SKLearnModel(model_data=self.model_s3_path,
-                                     role='oleg2-sagemaker-mztdpcvj',
-                                     entry_point='flows/ecosystem/sm_entry_point.py',
+                                     role=ROLE,
+                                     entry_point=CODE_LOCATION,
                                      framework_version='0.23-1',
                                      code_location='s3://oleg2-s3-mztdpcvj/sagemaker/')
         endpoint_name = 'HBA-RF-endpoint-{}'.format(int(round(time.time() * 1000)))
@@ -104,12 +113,12 @@ class ClassificationFlow(FlowSpec):
     @step
     def end(self):
         """
-        End of flow, yo!
+        End of flow!
         """
-        print("ClassificationFlow is all done.")
+        print("Deployment_Flow is all done.")
 
 
 if __name__ == "__main__":
-    ClassificationFlow()
+    Deployment_Flow()
 
 

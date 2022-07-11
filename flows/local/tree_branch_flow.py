@@ -1,7 +1,7 @@
 
 from metaflow import FlowSpec, step, card
 
-class ClassificationFlow(FlowSpec):
+class Branch_Flow(FlowSpec):
     """
     train multiple tree based methods
     """
@@ -83,7 +83,7 @@ class ClassificationFlow(FlowSpec):
     @step
     def end(self):
         """
-        End of flow, yo!
+        End of flow!
         """
         print('Scores:')
         print('\n'.join('%s %f' % res for res in self.results))
@@ -92,4 +92,4 @@ class ClassificationFlow(FlowSpec):
 
 
 if __name__ == "__main__":
-    ClassificationFlow()
+    Branch_Flow()
