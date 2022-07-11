@@ -1,7 +1,7 @@
 from metaflow import FlowSpec, step, card
 import json
 
-class ClassificationFlow(FlowSpec):
+class Tracking_Flow(FlowSpec):
     """
     train a random forest
     """
@@ -86,4 +86,4 @@ class ClassificationFlow(FlowSpec):
 
 
 if __name__ == "__main__":
-    ClassificationFlow()
+    Tracking_Flow()

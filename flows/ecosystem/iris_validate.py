@@ -2,7 +2,7 @@
 from metaflow import FlowSpec, step, card
 import json
 
-class ClassificationFlow(FlowSpec):
+class Validation_Flow(FlowSpec):
     """
     train a random forest
     """
@@ -87,8 +87,8 @@ class ClassificationFlow(FlowSpec):
         """
         End of flow!
         """
-        print("ClassificationFlow is all done.")
+        print("Validation_Flow is all done.")
 
 
 if __name__ == "__main__":
-    ClassificationFlow()
+    Validation_Flow()

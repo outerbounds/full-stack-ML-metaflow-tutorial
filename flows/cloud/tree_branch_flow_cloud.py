@@ -6,7 +6,7 @@ import json
 
 
 
-class ClassificationFlow(FlowSpec):
+class Branch_Flow_Cloud(FlowSpec):
     """
     train multiple tree based methods
     """
@@ -100,4 +100,4 @@ class ClassificationFlow(FlowSpec):
 
 
 if __name__ == "__main__":
-    ClassificationFlow()
+    Branch_Flow_Cloud()

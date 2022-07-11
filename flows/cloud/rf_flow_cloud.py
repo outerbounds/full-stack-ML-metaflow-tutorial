@@ -6,7 +6,7 @@ import json
 
 
 
-class ClassificationFlow(FlowSpec):
+class RF_Flow_cloud(FlowSpec):
     """
     train a random forest
     """
@@ -59,4 +59,4 @@ class ClassificationFlow(FlowSpec):
 
 
 if __name__ == "__main__":
-    ClassificationFlow()
+    RF_Flow_cloud()
