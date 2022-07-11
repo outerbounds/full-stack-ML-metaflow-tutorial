@@ -51,11 +51,8 @@ This will create a new environment called full-stack-ML-metaflow-tutorial. To ac
 ```
 source activate full-stack-metaflow
 ```
-On Windows, execute
 
-```
-activate full-stack-metaflow
-```
+If you're using Windows, please follow the instructions under Metaflow Windows Support [here](https://docs.metaflow.org/v/r/getting-started/install#windows-support): Metaflow currently doesn't offer native support for Windows. However, if you are using Windows 10, then you can use WSL (Windows Subsystem for Linux) to install Metaflow.
 
 
 ### 4. Open Jupyter Lab
