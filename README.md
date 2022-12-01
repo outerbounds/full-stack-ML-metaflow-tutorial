@@ -24,6 +24,11 @@ Also, note that when we say we're teaching "Full Stack Machine Learning", we are
 
 ## Getting set up computationally
 
+
+Instead of running this tutorial locally, you can use [our Metaflow sandbox here for free](https://account.outerbounds.dev/account/)!
+
+Sign in using Github or Gmail and once you're in, access your super secret Full Stack ML sandbox by editing the url: do this by appending `/?workspace=/home/workspace/workspaces/full-stack-ML-metaflow-tutorial/workspace.code-workspace` after `dev/`.
+
 ### 1. Clone the repository
 
 To get set up for this live coding session, clone this repository. You can do so by executing the following in your terminal:
