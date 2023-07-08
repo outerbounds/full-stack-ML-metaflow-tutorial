@@ -1,6 +1,8 @@
 **If you're taking this tutorial at a conference, please pull the repository 24 hours before the tutorial begins to make sure to have the most recent version!**
 
-# full-stack-ML-metaflow-tutorial
+**If you're at SciPy and want to access the content in your Metaflow sandbox, click [here](https://account.outerbounds.dev/account/?workspace=/home/workspace/workspaces/scipy-full-stack-ml/workspace.code-workspace).**
+
+# Full stack ML with Metaflow tutorial 
 
 
 One of the key questions in modern data science and machine learning, for businesses and practitioners alike, is how do you move machine learning projects from prototype and experiment to production as a repeatable process. In this workshop, we present an introduction to the landscape of production-grade tools, techniques, and workflows that bridge the gap between laptop data science and production ML workflows.
@@ -22,14 +24,24 @@ Also, note that when we say we're teaching "Full Stack Machine Learning", we are
 
 **However, we have always found that the most important and beneficial prerequisite is a will to learn new things so if you have this quality, you'll definitely get something out of this workshop.**
 
-## Getting set up computationally
+
+## Getting set up on your Metaflow sandbox
+
+If you want to get going as soon as possible you can use your [Metaflow sandbox](https://account.outerbounds.dev/account/) for free!
+We have already installed the workspace and its dependencies in your sandbox, so you can get going without any installation required.
+
+## Getting set up on your own infrastructure
+
+The easiest way to get started on your own infrastructure is to follow this [CloudFormation template](https://github.com/outerbounds/metaflow-tools/blob/master/aws/cloudformation/metaflow-cfn-template.yml). You can find [instructions here](https://github.com/outerbounds/metaflow-tools/tree/master/aws/cloudformation#how-to-deploy-from-the-aws-console).
+
+> _Note_: The CloudFormation template uses AWS Batch to provide compute resources. Some of the code in this repository uses the `@kubernetes` decorator, so if your Metaflow deployment uses Batch instead of Kubernetes,  you can replace `@kubernetes` with `@batch` as needed.
+
+### 1. Deploy Metaflow
+
+To set up to run on your own infrastructure stack, please review the [Metaflow engineering guides](https://outerbounds.com/engineering/welcome/). There you will find information on how to configure and operate Metaflow on AWS, Azure, or GCP. 
 
 
-Instead of running this tutorial locally, you can use [our Metaflow sandbox here for free](https://account.outerbounds.dev/account/)!
-
-Sign in using Github or Gmail and once you're in, access your super secret Full Stack ML sandbox by editing the url: do this by appending `?workspace=/home/workspace/workspaces/full-stack-ML-metaflow-tutorial/workspace.code-workspace` after `dev/`.
-
-### 1. Clone the repository
+### 2. Clone the repository
 
 To get set up for this live coding session, clone this repository. You can do so by executing the following in your terminal:
 
@@ -39,11 +51,13 @@ git clone https://github.com/outerbounds/full-stack-ML-metaflow-tutorial
 
 Alternatively, you can download the zip file of the repository at the top of the main page of the repository. If you prefer not to use git or don't have experience with it, this a good option.
 
-### 2. Download Anaconda (if you haven't already)
+
+### 3. Download Anaconda (if you haven't already)
 
 If you do not already have the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3, go get it.
 
-### 3. Create your conda environment for this session
+
+### 4. Create your conda environment for this session
 
 Navigate to the relevant directory `full-stack-ML-metaflow-tutorial` and install required packages in a new conda environment:
 
@@ -60,12 +74,11 @@ source activate full-stack-metaflow
 If you're using Windows, please follow the instructions under Metaflow Windows Support [here](https://docs.metaflow.org/v/r/getting-started/install#windows-support): Metaflow currently doesn't offer native support for Windows. However, if you are using Windows 10, then you can use WSL (Windows Subsystem for Linux) to install Metaflow.
 
 
-### 4. Open Jupyter Lab
+### 5. Open Jupyter Lab
 
 In the terminal, execute `jupyter lab`.
 
 Then open the notebook `1-Laptop-ML.ipynb` and we're ready to get coding. Enjoy.
-
 
 
 ## Session Outline
@@ -92,7 +105,4 @@ In this lesson, we’ll see how we can move ML steps or entire workflows to the 
 We’ll also see how to begin integrating other tools into our pipelines, such as dbt for data transformation, great expectations for data validation, Weights & Biases for experiment tracking, and Amazon Sagemaker for model deployment. Once again, the intention is not to tie us to any of these tools, but to use them to illustrate various aspects of the ML stack and to develop a workflow in which they can easily be switched out for other tools, depending on where you work and who you’re collaborating with.
 
 To be clear, lessons 1-3 above get you far! As your projects mature, the more advanced topics in Lesson 4 become relevant. 
-
-
-
 
