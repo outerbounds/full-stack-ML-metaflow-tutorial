@@ -1,0 +1,22 @@
+<h1>
+    The Challenger <var>TitanicSurvivalPredictor</var> Flow
+</h1>
+
+<p>
+    Let's deploy the challenger flow side-by-side with the champion/baseline flow. 
+    <br>
+    <br>
+    To deploy the flow, run the following command:
+    <br>
+    <var>
+        python flows/local/titanic_survival_predictor_xgb.py --environment=conda --production --branch challenger --production argo-workflows create
+    </var>
+    <br>
+    <br>
+    To run the flow, run the following command:
+    <br>
+    <var>
+        python flows/local/titanic_survival_predictor_xgb.py --environment=conda --production --branch challenger --production argo-workflows trigger
+    </var>
+
+</p>

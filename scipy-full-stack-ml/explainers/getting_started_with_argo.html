@@ -1,0 +1,31 @@
+<h1>
+    Getting started with Argo
+</h1>
+
+This flow looks very similar to the previous one, with the addition of the <a href="https://docs.metaflow.org/production/scheduling-metaflow-flows/introduction"> <var>schedule</var> decorator</a>.
+<br><br>
+When the flow is run with the following command:
+<br>
+<var>python flows/cloud/tree_branch_cloud_flow_deploy.py --environment=conda argo-workflows create</var>
+<br>
+then the flow is deployed to Argo.
+<br><br>
+Since the <var>FlowSpec</var> is annotated with the <var>@schedule(cron='58 * * * * *')</var>, this flow will be run on Argo every hour on the 58th minute. 
+<br><br>
+Change this value to a minute value that is coming up, leave the rest of the <a href="https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm">cron expression</a> go to your Argo UI, and watch to see the flow run.
+<br>
+<br>
+Now, go to the Argo deployment attached to your sandbox by finding your ID from the URL in your browser.
+
+Your sandbox has a unique ID, visible in the UsRL with this pattern.
+<var> 
+https://vs-YOUR_ID.outerbounds.dev/<DELETE EVERYTHING AFTER THIS>
+</var>
+
+Remove the <var>vs</var> part in front, and everything after <var>.dev</var>, then navigate to your sandboxes Argo deployment at:
+<var> 
+https://argo-YOUR_ID.outerbounds.dev/
+</var>
+<br>
+<br>
+Check out the docs linked above to see more patterns.

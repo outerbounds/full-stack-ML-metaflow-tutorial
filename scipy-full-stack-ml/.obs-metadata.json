@@ -1,0 +1,354 @@
+{
+  "meta": {},
+  "data": {
+    "id": "full-stack-metaflow",
+    "title": "SciPy: Full Stack Machine Learning and Delivering Business Value",
+    "defaultPath": "./notebooks/intro.ipynb",
+    "showPrimaryView": true,
+    "numbered": true,
+    "sections": [
+      {
+        "title": "Introduction",
+        "description": "",
+        "doc": "./explainers/intro.html",
+        "path": "./notebooks/intro.ipynb"
+      },
+      {
+        "title": "The Basics of Metaflow",
+        "description": "",
+        "path": "./flows/local/flow_template.py",
+        "doc": "./explainers/flow-template.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/flow_template.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "Exploratory Data Analysis",
+        "description": "",
+        "path": "./notebooks/week-1-eda.ipynb",
+        "doc": "./explainers/first-df-flow.html"
+      },
+      {
+        "title": "Your First Data Science Flow",
+        "description": "",
+        "path": "./flows/local/titanic_flow_1.py",
+        "doc": "./explainers/titanic-1.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/titanic_flow_1.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "Orchestrating Random Forests",
+        "description": "",
+        "path": "./flows/local/rf_flow.py",
+        "doc": "./explainers/rf.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/rf_flow.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "Boosted Trees Flow",
+        "description": "",
+        "path": "./flows/local/boosted_flow.py",
+        "doc": "./explainers/xgb.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/boosted_flow.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "Hands on: Your First Deep Learning Metaflow!",
+        "description": "",
+        "path": "./flows/local/NN_flow_student.py",
+        "doc": "./explainers/dl.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/NN_flow_student.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "BREAK 1",
+        "description": "",
+        "path": "./notebooks/break-1.ipynb"
+      },
+      {
+        "title": "The Unreasonable Effective of Branching Flows",
+        "description": "",
+        "path": "./flows/local/tree_branch_flow.py",
+        "doc": "./explainers/tree-branch.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/tree_branch_flow.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "More EDA on the Titanic dataset",
+        "description": "",
+        "path": "./notebooks/week-2-branch.ipynb",
+        "doc": "./explainers/eda-2.html"
+      },
+      {
+        "title": "Rule-based Model",
+        "description": "",
+        "path": "./flows/local/titanic_flow_2.py",
+        "doc": "./explainers/rule-based-model.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/titanic_flow_2.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "Hands on: Branching Flow",
+        "description": "",
+        "path": "./flows/local/titanic_flow_3_student.py",
+        "doc": "./explainers/branch.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/titanic_flow_3_student.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "Comparing Models and Building ML Models",
+        "description": "",
+        "path": "./notebooks/week-2-compare-models.ipynb",
+        "doc": "./explainers/compare-models.html"
+      },
+      {
+        "title": "Data preparation in your ML workflow",
+        "description": "",
+        "path": "./flows/local/titanic_flow_4.py",
+        "doc": "./explainers/data-prep-ml-workflow.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/titanic_flow_4.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "Iterative approach to building ML workflows",
+        "description": "",
+        "path": "./notebooks/week-2-iterate.ipynb",
+        "doc": "./explainers/iterative-ml.html"
+      },
+      {
+        "title": "Hands on: Hyperparameter search in your ML workflow",
+        "description": "",
+        "path": "./flows/local/titanic_flow_5_student.py",
+        "doc": "./explainers/hpo.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/titanic_flow_5_student.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "Analyze training results",
+        "description": "",
+        "path": "./notebooks/week-2-final-analysis.ipynb",
+        "doc": "./explainers/analyze-training-results.html"
+      },
+      {
+        "title": "Scaling to the cloud",
+        "description": "",
+        "path": "./flows/cloud/titanic_flow_5_cloud.py",
+        "doc": "./explainers/cloud.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/cloud/titanic_flow_5_cloud.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "BREAK 2",
+        "description": "",
+        "path": "./notebooks/break-2.ipynb"
+      },
+      {
+        "title": "Random Forest flows on the cloud",
+        "description": "",
+        "path": "./flows/cloud/rf_flow_cloud.py",
+        "doc": "./explainers/rf-cloud-intro.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/cloud/rf_flow_cloud.py",
+          "label": "Run Flow",
+          "preFlags": "--environment=conda --with kubernetes"
+        }
+      },
+      {
+        "title": "Parallel training on the cloud",
+        "description": "",
+        "path": "./flows/cloud/tree_branch_flow_cloud.py",
+        "doc": "./explainers/parallel.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/cloud/tree_branch_flow_cloud.py",
+          "label": "Run Flow",
+          "preFlags": "--environment=conda --with kubernetes"
+        }
+      },
+      {
+        "title": "Hands on: Sending specific steps to the cloud",
+        "description": "",
+        "path": "./flows/cloud/tree_branch_cloud_step_student.py",
+        "doc": "./explainers/cloud-branch.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/cloud/tree_branch_cloud_step_student.py",
+          "label": "Run Flow",
+          "preFlags": "--environment=conda"
+        }
+      },
+      {
+        "title": "Specficying dependencies at the flow level",
+        "description": "",
+        "path": "./flows/cloud/tree_branch_cloud_flow.py",
+        "doc": "./explainers/flow-deps.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/cloud/tree_branch_flow_cloud.py",
+          "label": "Run Flow",
+          "preFlags": "--environment=conda --with kubernetes"
+        }
+      },
+      {
+        "title": "Getting started with Argo",
+        "description": "",
+        "path": "./flows/cloud/tree_branch_cloud_flow_deploy.py",
+        "doc": "./explainers/getting_started_with_argo.html",
+        "action": {
+          "type": "deploy",
+          "value": "./flows/cloud/tree_branch_cloud_flow_deploy.py",
+          "label": "Deploy Flow",
+          "preFlags": "--environment=conda"
+        }
+      },
+      {
+        "title": "How to handle failures with Metaflow - I",
+        "description": "",
+        "path": "./flows/local/div1.py",
+        "doc": "./explainers/broken-flow.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/div1.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "How to handle failures with Metaflow - II",
+        "description": "",
+        "path": "./flows/local/div2.py",
+        "doc": "./explainers/fixed-flow.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/div2.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "Hands on: Recovering from transient errors with @retry",
+        "description": "",
+        "path": "./flows/local/retry_student.py",
+        "doc": "./explainers/retry.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/retry_student.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "Killing zombies with @timeout",
+        "description": "",
+        "path": "./flows/local/timeout.py",
+        "doc": "./explainers/timeout.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/timeout.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "The decorator of last resort: @catch",
+        "description": "",
+        "path": "./flows/local/catch.py",
+        "doc": "./explainers/catch.html",
+        "action": {
+          "type": "run",
+          "value": "./flows/local/catch.py",
+          "label": "Run Flow"
+        }
+      },
+      {
+        "title": "BREAK 3",
+        "description": "",
+        "path": "./notebooks/break-3.ipynb"
+      },
+      {
+        "title": "Multiplayer Metaflow",
+        "description": "",
+        "path": "./notebooks/concepts.ipynb",
+        "doc": "./explainers/concepts.html"
+      }, 
+      {
+        "title": "Deploy a Baseline Flow",
+        "description": "",
+        "path": "./flows/local/titanic_survival_predictor.py",
+        "doc": "./explainers/baseline_flow.html",
+        "action": {
+          "type": "deploy",
+          "value": "./flows/local/titanic_survival_predictor.py",
+          "label": "Deploy Flow",
+          "preFlags": "--environment=conda"
+        }
+      }, 
+      {
+        "title": "Serve Model Predictions",
+        "description": "",
+        "path": "./notebooks/endpoint-champ-only.ipynb",
+        "doc": "./explainers/serve-champ.html"
+      }, 
+      {
+        "title": "Deploy the Challenger Branch",
+        "description": "",
+        "path": "./flows/local/titanic_survival_predictor_xgb.py",
+        "doc": "./explainers/challenger_flow.html",
+        "action": {
+          "type": "deploy",
+          "value": "./flows/local/titanic_survival_predictor_xgb.py",
+          "label": "Deploy Flow",
+          "preFlags": "--environment=conda"
+        }
+      }, 
+      {
+        "title": "Analyze the Challenger/Champion Results",
+        "description": "",
+        "path": "./notebooks/challenger-champion.ipynb",
+        "doc": "./explainers/challenger-champion.html"
+      }, 
+      {
+        "title": "Serve Models Side-by-side for A/B Testing",
+        "description": "",
+        "path": "./notebooks/endpoint-ab.ipynb",
+        "doc": "./explainers/serve-ab.html"
+      }, 
+      {
+        "title": "What's next",
+        "description": "",
+        "path": "./notebooks/next.ipynb",
+        "doc": "./explainers/next.html"
+      }
+    ],
+    "links": []
+  }
+}

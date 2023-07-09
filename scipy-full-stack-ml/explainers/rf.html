@@ -1,0 +1,51 @@
+<h1> Orchestrating Random Forests </h1>
+
+
+In this section, we'll turn the following random forest into a flow:
+
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+
+<span style="color: #888888">#Import scikit-learn dataset library</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">sklearn</span> <span style="color: #008800; font-weight: bold">import</span> datasets
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">sklearn.model_selection</span> <span style="color: #008800; font-weight: bold">import</span> cross_val_score
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">sklearn.ensemble</span> <span style="color: #008800; font-weight: bold">import</span> RandomForestClassifier
+
+<span style="color: #888888">#Load dataset</span>
+iris <span style="color: #333333">=</span> datasets<span style="color: #333333">.</span>load_iris()
+X <span style="color: #333333">=</span> iris<span style="color: #333333">.</span>data
+y <span style="color: #333333">=</span> iris<span style="color: #333333">.</span>target
+
+clf_rf <span style="color: #333333">=</span> RandomForestClassifier(n_estimators<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">10</span>, max_depth<span style="color: #333333">=</span><span style="color: #007020">None</span>,
+  min_samples_split<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">2</span>, random_state<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>)
+scores_rf <span style="color: #333333">=</span> cross_val_score(clf_rf, X, y, cv<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5</span>)
+<span style="color: #008800; font-weight: bold">print</span>(scores_rf)
+
+</pre></div>
+
+<br>
+<br>
+
+In order to turn this into a (Metaflow) flow, you first need to decide what your steps are going to be. In this case, we’ll have distinct steps to
+
+
+<ul>
+  <li>Load the data</li>
+  <li>Instantiate the model</li>
+  <li>Train the model and perform cross-validation</li>
+</ul>
+<br>
+
+In general, this involves some design choices on the user’s part and we have some general rules of thumb <a href="https://docs.metaflow.org/metaflow/basics">here</a>
+<br><br>
+To then write your flow, you
+<ul>
+  <li>Import <var>FlowSpec</var> and <var>step</var> outside your flow</li>
+  <li>Include step-specific imports within each step</li>
+  <li>Assign any data structures you wish to pass between steps to self</li>
+</ul>
+
+<style>
+  ul {
+    padding-left: 25px;
+  }
+</style>

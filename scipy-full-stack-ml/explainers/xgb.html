@@ -1,0 +1,23 @@
+<h1>Boosted Trees Flow</h1>
+
+Like the last section, we'll turn the following <a href="https://xgboost.readthedocs.io/en/stable/">XGBoost</a> code into a flow:
+
+<!-- HTML generated using hilite.me -->
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">xgboost</span> <span style="color: #008800; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">xgb</span>
+<span style="color: #888888"># read in data</span>
+dtrain <span style="color: #333333">=</span> xgb<span style="color: #333333">.</span>DMatrix(<span style="background-color: #fff0f0">&#39;../data/agaricus.txt.train&#39;</span>)
+dtest <span style="color: #333333">=</span> xgb<span style="color: #333333">.</span>DMatrix(<span style="background-color: #fff0f0">&#39;../data/agaricus.txt.test&#39;</span>)
+<span style="color: #888888"># specify parameters</span>
+param <span style="color: #333333">=</span> {<span style="background-color: #fff0f0">&#39;max_depth&#39;</span>:<span style="color: #0000DD; font-weight: bold">2</span>, <span style="background-color: #fff0f0">&#39;eta&#39;</span>:<span style="color: #0000DD; font-weight: bold">1</span>, <span style="background-color: #fff0f0">&#39;objective&#39;</span>:<span style="background-color: #fff0f0">&#39;binary:logistic&#39;</span>, <span style="background-color: #fff0f0">&#39;eval_metric&#39;</span>:<span style="background-color: #fff0f0">&#39;logloss&#39;</span>}
+num_round <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span>
+bst <span style="color: #333333">=</span> xgb<span style="color: #333333">.</span>train(param, dtrain, num_round)
+<span style="color: #888888"># make prediction</span>
+preds <span style="color: #333333">=</span> bst<span style="color: #333333">.</span>predict(dtest)
+<span style="color: #008800; font-weight: bold">print</span>(preds)
+</pre></div>
+<br>
+<br>
+
+At this point, it may be helpful to go back to the previous section and review the flow with random forest to comapre to this flow with the XGBoost model.
+In the next section, we will add more model types to your ML workflow-building toolkit, by wading into the world of deep learning!
