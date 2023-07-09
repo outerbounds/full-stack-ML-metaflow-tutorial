@@ -1,5 +1,7 @@
 **If you're taking this tutorial at a conference, please pull the repository 24 hours before the tutorial begins to make sure to have the most recent version!**
 
+**If you're at SciPy and want to access the content in your Metaflow sandbox, click [here](https://account.outerbounds.dev/account/?workspace=/home/workspace/workspaces/scipy-full-stack-ml/workspace.code-workspace).**
+
 # full-stack-ML-metaflow-tutorial
 
 
@@ -25,7 +27,7 @@ Also, note that when we say we're teaching "Full Stack Machine Learning", we are
 
 ## Getting set up on your Metaflow sandbox
 
-If you want to get going as soon as possible you can use your [Metaflow sandbox](https://account.outerbounds.dev/account/) for free!
+If you want to get going as soon as possible you can use your [Metaflow sandbox](https://account.outerbounds.dev/account/?workspace=/home/workspace/workspaces/scipy-full-stack-ml/workspace.code-workspace) for free.
 We have already installed the workspace and its dependencies in your sandbox, so you can get going without any installation required.
 
 The easiest way to get started is to follow this [CloudFormation template](https://github.com/outerbounds/metaflow-tools/blob/master/aws/cloudformation/metaflow-cfn-template.yml). You can find [instructions here](https://github.com/outerbounds/metaflow-tools/tree/master/aws/cloudformation#how-to-deploy-from-the-aws-console).
@@ -75,10 +77,9 @@ If you're using Windows, please follow the instructions under Metaflow Windows S
 
 ### 5. Open Jupyter Lab
 
-In the terminal, execute `jupyter lab`.
+In the terminal, run any command you use to open a `.ipynb` file, for example `jupyter lab`.
 
-Then open the notebook `1-Laptop-ML.ipynb` and we're ready to get coding. Enjoy.
-
+> To see the order the content was intended to be run, check out the data sections of the [workspace file](./.obs-metadata.json) that organizes your [sandbox workspace](https://account.outerbounds.dev/account/?workspace=/home/workspace/workspaces/scipy-full-stack-ml/workspace.code-workspace).
 
 ## Session Outline
 
