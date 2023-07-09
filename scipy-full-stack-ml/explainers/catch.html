@@ -1,0 +1,14 @@
+<h1>
+    The decorator of last resort: <var>@catch</var>
+</h1>
+
+<p>
+    As mentioned in previous sections, 
+    <var>@retry</var> is an appropriate tool for dealing with transient issues. 
+    What about issues that are not transient? 
+    Metaflow has another decorator, 
+    <var>@catch</var> that catches any exceptions that occur during the step and then continues execution of subsequent steps.
+
+The main upside of <var>@catch</var> is that it can make your workflows extremely robust: it will handle all error scenarios from faulty code and faulty data to platform issues. 
+The main downside is that your code needs to be modified so that it can tolerate faulty steps.
+</p>

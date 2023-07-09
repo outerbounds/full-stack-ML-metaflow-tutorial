@@ -1,0 +1,18 @@
+<h1>
+    Killing zombies with <var>@timeout</var>
+</h1>
+
+<p>
+By default, there is no timeout for steps. 
+If you cause an infinite loop accidentally or query an external service that hangs, 
+the step will block the flow forever. 
+This is undesirable especially in production runs that should not require human intervention.
+
+Metaflow provides a <var>@timeout</var> decorator to address this issue.
+
+<br><br>
+
+Besides seconds, you can specify minutes and/or hours as the <var>@timeout</var> value. Note that all values specified are cumulative so specifying 10 seconds and 5 minutes will result in a timeout of 5 minutes and 10 seconds.
+The above example raises an exception if the <var>@step</var> does not finish in the given time period. This is a good pattern if the timeout is a genuine error condition.
+
+</p>

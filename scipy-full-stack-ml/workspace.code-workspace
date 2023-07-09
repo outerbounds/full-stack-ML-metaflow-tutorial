@@ -1,0 +1,27 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "/home/workspace/mambaforge/envs/scipy-full-stack-ml/bin/python",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "workbench.editor.showTabs": false,
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "terminal.integrated.tabs.showActiveTerminal": "singleTerminal",
+    "terminal.integrated.tabs.enabled": false,
+    "workbench.colorTheme": "theme-ob-light",
+    "files.exclude": {
+      "**/.git": true,
+      "dist": true,
+      "node_modules": true,
+      "**/.ob-metadata.json": true,
+      "metaflow_extensions": true,
+      "tutorials_data": true,
+      "tutorials.json": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<h1>
+    Recovering from transient errors with <var>@retry</var>
+</h1>
+
+<strong>Completing this section requires hands on activity!</strong>
+<br>
+<br>
+
+<p>
+    Metaflow provides straightforward tools for you to handle all scenarios such as misbehaving code, unanticipated issues with data, and platform issues. 
+    For more context, you can see a quick summary of the tools <a href="https://docs.metaflow.org/scaling/failures#summary">here</a>.
+    <br>
+    <br>
+    This lesson focuses on the <var>@retry</var> decorator.
+    When you run this flow you will see that sometimes it succeeds without a hitch, but sometimes the start step raises an exception and needs to be retried. 
+    By default, retry retries the step three times.
+</p>

@@ -1,0 +1,57 @@
+<h1> Your First Deep Learning Flow!</h2>
+
+<strong>Completing this section requires hands on activity!</strong>
+<br>
+<br>
+
+Like the last section, we'll turn the following <a href="https://xgboost.readthedocs.io/en/stable/">XGBoost</a> code into a flow:
+
+<!-- HTML generated using hilite.me -->
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">numpy</span> <span style="color: #008800; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">np</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">tensorflow</span> <span style="color: #008800; font-weight: bold">import</span> keras
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">tensorflow.keras</span> <span style="color: #008800; font-weight: bold">import</span> layers
+
+<span style="color: #888888"># Model / data parameters</span>
+num_classes <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">10</span>
+input_shape <span style="color: #333333">=</span> (<span style="color: #0000DD; font-weight: bold">28</span>, <span style="color: #0000DD; font-weight: bold">28</span>, <span style="color: #0000DD; font-weight: bold">1</span>)
+
+<span style="color: #888888"># the data, split between train and test sets</span>
+(x_train, y_train), (x_test, y_test) <span style="color: #333333">=</span> keras<span style="color: #333333">.</span>datasets<span style="color: #333333">.</span>mnist<span style="color: #333333">.</span>load_data()
+
+<span style="color: #888888"># Scale images to the [0, 1] range</span>
+x_train <span style="color: #333333">=</span> x_train<span style="color: #333333">.</span>astype(<span style="background-color: #fff0f0">&quot;float32&quot;</span>) <span style="color: #333333">/</span> <span style="color: #0000DD; font-weight: bold">255</span>
+x_test <span style="color: #333333">=</span> x_test<span style="color: #333333">.</span>astype(<span style="background-color: #fff0f0">&quot;float32&quot;</span>) <span style="color: #333333">/</span> <span style="color: #0000DD; font-weight: bold">255</span>
+<span style="color: #888888"># Make sure images have shape (28, 28, 1)</span>
+x_train <span style="color: #333333">=</span> np<span style="color: #333333">.</span>expand_dims(x_train, <span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span>)
+x_test <span style="color: #333333">=</span> np<span style="color: #333333">.</span>expand_dims(x_test, <span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span>)
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;x_train shape:&quot;</span>, x_train<span style="color: #333333">.</span>shape)
+<span style="color: #008800; font-weight: bold">print</span>(x_train<span style="color: #333333">.</span>shape[<span style="color: #0000DD; font-weight: bold">0</span>], <span style="background-color: #fff0f0">&quot;train samples&quot;</span>)
+<span style="color: #008800; font-weight: bold">print</span>(x_test<span style="color: #333333">.</span>shape[<span style="color: #0000DD; font-weight: bold">0</span>], <span style="background-color: #fff0f0">&quot;test samples&quot;</span>)
+
+
+<span style="color: #888888"># convert class vectors to binary class matrices</span>
+y_train <span style="color: #333333">=</span> keras<span style="color: #333333">.</span>utils<span style="color: #333333">.</span>to_categorical(y_train, num_classes)
+y_test <span style="color: #333333">=</span> keras<span style="color: #333333">.</span>utils<span style="color: #333333">.</span>to_categorical(y_test, num_classes)
+
+model <span style="color: #333333">=</span> keras<span style="color: #333333">.</span>Sequential(
+    [
+        keras<span style="color: #333333">.</span>Input(shape<span style="color: #333333">=</span>input_shape),
+        layers<span style="color: #333333">.</span>Conv2D(<span style="color: #0000DD; font-weight: bold">32</span>, kernel_size<span style="color: #333333">=</span>(<span style="color: #0000DD; font-weight: bold">3</span>, <span style="color: #0000DD; font-weight: bold">3</span>), activation<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;relu&quot;</span>),
+        layers<span style="color: #333333">.</span>MaxPooling2D(pool_size<span style="color: #333333">=</span>(<span style="color: #0000DD; font-weight: bold">2</span>, <span style="color: #0000DD; font-weight: bold">2</span>)),
+        layers<span style="color: #333333">.</span>Conv2D(<span style="color: #0000DD; font-weight: bold">64</span>, kernel_size<span style="color: #333333">=</span>(<span style="color: #0000DD; font-weight: bold">3</span>, <span style="color: #0000DD; font-weight: bold">3</span>), activation<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;relu&quot;</span>),
+        layers<span style="color: #333333">.</span>MaxPooling2D(pool_size<span style="color: #333333">=</span>(<span style="color: #0000DD; font-weight: bold">2</span>, <span style="color: #0000DD; font-weight: bold">2</span>)),
+        layers<span style="color: #333333">.</span>Flatten(),
+        layers<span style="color: #333333">.</span>Dropout(<span style="color: #6600EE; font-weight: bold">0.5</span>),
+        layers<span style="color: #333333">.</span>Dense(num_classes, activation<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;softmax&quot;</span>),
+    ]
+)
+
+model<span style="color: #333333">.</span>summary()
+batch_size <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">128</span>
+</pre></div>
+
+
+<br>
+<br>
+
+Watch the epochs roll on in and then let's check out the Metaflow card in the GUI!

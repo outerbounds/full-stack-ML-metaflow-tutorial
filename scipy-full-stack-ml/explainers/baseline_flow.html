@@ -1,0 +1,23 @@
+<h1>
+    The Baseline <var>TitanicSurvivalPredictor</var> Flow
+</h1>
+
+<p>
+    Let's deploy the baseline flow. 
+    In the champion/challenger perspective, this model will be considered the reigning champion until we discover a better one to replace it with. 
+    <br>
+    <br>
+    To deploy the flow, run the following command:
+    <br>
+    <var>
+        python flows/local/titanic_survival_predictor.py --environment=conda --production --branch champion argo-workflows create
+    </var>
+    <br>
+    <br>
+    To run the flow, run the following command:
+    <br>
+    <var>
+        python flows/local/titanic_survival_predictor.py --environment=conda --production --branch champion argo-workflows trigger
+    </var>
+
+</p>
