@@ -59,22 +59,22 @@ If you do not already have the [Anaconda distribution](https://www.anaconda.com/
 
 ### 4. Create your conda environment for this session
 
-Navigate to the relevant directory `full-stack-ML-metaflow-tutorial` and install required packages in a new conda environment:
+Navigate to the relevant directory `scipy-full-stack-ml` and install required packages in a new conda environment:
 
 ```
 conda env create -f env.yml
 ```
 
-This will create a new environment called full-stack-ML-metaflow-tutorial. To activate the environment on OSX/Linux, execute
+This will create a new environment called `scipy-full-stack-ml`. To activate the environment on OSX/Linux, execute
 
 ```
-source activate full-stack-metaflow
+source activate scipy-full-stack-ml
 ```
 
 If you're using Windows, please follow the instructions under Metaflow Windows Support [here](https://docs.metaflow.org/v/r/getting-started/install#windows-support): Metaflow currently doesn't offer native support for Windows. However, if you are using Windows 10, then you can use WSL (Windows Subsystem for Linux) to install Metaflow.
 
 
-### 5. Open Jupyter Lab
+### 5. Open Jupyter Lab, VSCode notebook, etc.
 
 In the terminal, execute `jupyter lab`.
 
